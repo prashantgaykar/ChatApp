@@ -1,0 +1,78 @@
+<html>
+ <head>
+       <style>
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: #4CAF50;
+    text-align: center;
+}
+
+div {
+    width: 450px;
+    height: 400px;
+    overflow-y: scroll;
+    border: solid 2px;
+    border-color:#4CAF50;
+    color: lightcoral;
+    text-align: left;
+    padding: 8px 22px;
+}
+
+
+content {
+    text-align: left;
+    font-family: verdana;
+    font-size: 20px;
+}
+           .text {
+    background-color: white;
+    border: solid;
+    color: #4CAF50;
+    padding: 8px 22px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    width: 400px;
+    cursor: pointer;
+           }
+           
+           .button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+</style>
+     <script src='/chat.js'></script>
+<script src='/socket.io/socket.io.js'></script>
+    </head>
+    <body>
+        <h1>Node js Chat</h1>
+        <center>
+        <div>
+        <content id='board'></content>
+            </div>
+        <p id='name'></p>
+        <input type=text id='field' onkeypress='enterPress(event)' class="text"></input>
+        <input type=button id='send' value=' send ' class="button"></input>
+        </center>
+    </body>
+
+<script lang="javascript">
+
+            var n = prompt('enter your name : ');
+            document.getElementById('name').value = n;
+        
+    </script>
+</html>
