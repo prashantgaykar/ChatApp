@@ -1,6 +1,10 @@
 {
   "name": "ChatApp",
   "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+      "start": "node index.js"
+  }    
   "description": "Real time web chat",
   "dependencies": {
     "ejs": "^2.5.1",
